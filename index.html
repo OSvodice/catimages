@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thousands of Catz!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffebcd;
+        }
+        h1 {
+            color: #ff4500;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            margin: 10px;
+        }
+        .catz-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>So Many Catz!</h1>
+    <p>Here are **all** the cats!</p>
+
+    <div class="catz-container" id="catzContainer"></div>
+
+    <script>
+        // JavaScript to dynamically load images
+        const totalImages = 1000; // Number of cat images in your 'cat' folder
+        const container = document.getElementById('catzContainer');
+
+        for (let i = 1; i <= totalImages; i++) {
+            const img = document.createElement('img');
+            img.src = `./cat/cat${i}.jpg`;  // Adjust the path if needed based on your folder structure
+            img.alt = `Cat ${i}`;
+            img.title = `Cat ${i}`;
+            container.appendChild(img);
+        }
+    </script>
+</body>
+</html>
