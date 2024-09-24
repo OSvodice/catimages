@@ -23,16 +23,29 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: blue;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <h1>So Many Catz!</h1>
     <p>Here are **all** the cats!</p>
 
+    <!-- Link to Dog page -->
+    <a href="dogs.html">Like dogs more? Click this!</a>
+
     <div class="catz-container" id="catzContainer"></div>
 
     <script>
-        // JavaScript to dynamically load images
+        // JavaScript to dynamically load cat images
         const totalImages = 1000; // Number of cat images in your 'cat' folder
         const container = document.getElementById('catzContainer');
 
